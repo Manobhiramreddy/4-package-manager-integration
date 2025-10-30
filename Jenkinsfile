@@ -12,14 +12,14 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Installing dependencies...'
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Running the Node.js application...'
-                sh 'node app.js'
+                bat 'node app.js'
             }
         }
     }
